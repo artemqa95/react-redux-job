@@ -1,0 +1,14 @@
+.Layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    background: linear-gradient(90deg, #5041b2 0%, #7969e6 100%);
+}
+.Container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1050px;
+    width: 100%;
+    align-items: center;
+}

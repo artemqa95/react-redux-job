@@ -1,0 +1,22 @@
+.RowTableTitle {
+    margin-left: 6%;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+}
+
+.RowTableTitle span {
+    font-size: 2.5vw;
+    text-align: center;
+    width: 32%;
+    background: #1fbae5;
+    border-radius: 5px;
+}
+
+@media (min-width: 800px) {
+    .RowTableTitle span {
+        font-size: 18px;
+    }
+}

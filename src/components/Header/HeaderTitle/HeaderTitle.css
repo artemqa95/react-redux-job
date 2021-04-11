@@ -1,0 +1,26 @@
+.HeaderTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+.HeaderTitle:after {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ffbd04;
+    content: '';
+    z-index: -1
+}
+
+.HeaderTitle h3 {
+    text-align: center;
+    background: #7e96cb;
+    border: 1px solid #b4acac;
+    border-radius: 10px;
+    width: 300px;
+    font-size: 20px;
+}

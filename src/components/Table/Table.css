@@ -1,0 +1,8 @@
+.Table {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 500px;
+    padding-right: 3%;
+}

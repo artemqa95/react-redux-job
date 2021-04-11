@@ -1,0 +1,38 @@
+.FooterCell {
+    box-sizing: border-box;
+    background: linear-gradient(to left top, #7b13e2, #29e2bc);
+    width: 15%;
+    padding-bottom: 15%;
+    margin: 2% 2%;
+    border-radius: 5px;
+    border: 1px solid black;
+    position: relative;
+}
+.FooterCell.active {
+    background: red;
+    transition: background 0.5s ease-in-out;
+    opacity: 0.75;
+}
+
+.FooterCell img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.up {
+    transform: rotate(-90deg);
+}
+
+.right {
+    transform: rotate(0deg);;
+}
+
+.down {
+    transform: rotate(90deg);
+}
+
+.left {
+    transform: rotate(180deg);
+}
