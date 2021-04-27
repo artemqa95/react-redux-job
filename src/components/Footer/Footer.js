@@ -3,6 +3,7 @@ import './Footer.css'
 import FooterCell from "./FooterCell/FooterCell";
 import {connect} from "react-redux";
 import {gameIsFinished, gameMakeStep} from "../../store/actions/game";
+import text from "../../text/translation";
 const Footer = props => {
     const cells = new Array(10).fill('');
     if (!props.isFinished) {
@@ -21,7 +22,7 @@ const Footer = props => {
                     <FooterCell currentStep={props.currentStep} key={index} index={index}/>
                 )
             })}
-            <h3>Укажите местоположение после 10 ходов</h3>
+            <h3>{text.footer}</h3>
         </div>
     )
 }
