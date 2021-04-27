@@ -8,10 +8,7 @@ const Table = props => {
         <section className={'Table'}>
             <RowTableTitle/>
             <ColumnTableTitle/>
-            <Field startPoint={props.startPoint}
-            onAnswered={props.onAnswered}
-            correctAnswer={props.correctAnswer}
-            answer={props.answer}/>
+            <Field/>
         </section>
     )
 }

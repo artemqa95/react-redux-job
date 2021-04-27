@@ -1,18 +1,25 @@
 import React from "react";
 import './FooterCell.css'
 import arrowImg from '../../../images/arrow.png'
+import {connect} from "react-redux";
 const FooterCell = props => {
     const classes = ['FooterCell']
-    if (props.index + 1 === props.currentIndex) classes.push('active')
-
+    if (props.index + 1 === props.currentStep) classes.push('active')
     return (
         <div className={classes.join(' ')}>
-            {props.index<props.currentIndex ?
+            {props.index<props.currentStep ?
                 <img
-                className={props.arrowDirections? props.arrowDirections[props.index] : ''}
+                className={props.directionsArray? props.directionsArray[props.index] : ''}
                 src={arrowImg} alt="arrow"
             /> : null}
         </div>
     )
 }
-export default FooterCell
+
+function mapStateToProps(state) {
+    return {
+        directionsArray: state.game.directionsArray,
+    }
+}
+
+export default connect(mapStateToProps)(FooterCell)

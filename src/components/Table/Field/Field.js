@@ -2,6 +2,8 @@ import React from "react";
 import './Field.css'
 import FieldCell from "./FieldCell/FieldCell";
 import startImg from '../../../images/start.png'
+import {connect} from "react-redux";
+
 const Field = props => {
 const cells = new Array(9).fill('')
     return (
@@ -9,15 +11,21 @@ const cells = new Array(9).fill('')
             {cells.map((_, index) => {
                 return (
                     <FieldCell key={index}
-                               onAnswered={props.onAnswered}
-                               index={index}
-                               correctAnswer={props.correctAnswer}
-                               answer={props.answer}>
-                        {index === props.startPoint? <img src={startImg} alt="start"/> : null }
+                               index={index}>
+                        {index+1 === props.startPoint? <img src={startImg} alt="start"/> : null }
                     </FieldCell>
                 )
             })}
         </div>
     )
 }
-export default Field
+
+
+
+function mapStateToProps(state) {
+   return {
+       startPoint: state.game.startPoint
+   }
+}
+
+export default connect(mapStateToProps)(Field)

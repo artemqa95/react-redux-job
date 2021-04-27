@@ -1,9 +1,12 @@
 import React from "react";
-import Layout from "./hoc/Layout";
+import Layout from "./components/Layout/Layout";
+
 function App() {
-  return (
-    <Layout/>
-  );
+    return (
+        <Layout>
+            <Layout/>
+        </Layout>
+    );
 }
 
 export default App;
