@@ -1,7 +1,8 @@
-import {MENU_TOGGLE} from "../actions/actionTypes";
+import {MENU_CHANGE_LANGUAGE, MENU_TOGGLE} from "../actions/actionTypes";
 
 const initialState = {
-   showMenu: false
+    showMenu: false,
+    language: 'ru'
 }
 
 export default function gameReducer(state = initialState, action) {
@@ -9,6 +10,10 @@ export default function gameReducer(state = initialState, action) {
         case MENU_TOGGLE:
             return {
                 ...state, showMenu: action.showMenu
+            }
+        case MENU_CHANGE_LANGUAGE:
+            return {
+                ...state, language: action.language
             }
 
         default:

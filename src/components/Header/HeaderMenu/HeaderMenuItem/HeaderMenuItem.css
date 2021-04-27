@@ -1,0 +1,20 @@
+.HeaderMenuItem {
+    box-sizing: border-box;
+    padding: 0 5px;
+    margin: 0 15px;
+    cursor: pointer;
+    border: 2px solid #bebebe;
+    border-radius: 5px;
+    background: #656361;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    transition: background 0.5s ease-in-out;
+}
+
+.HeaderMenuItem:hover {
+    background: #ffbd04;
+}
+
+.HeaderMenuItem.active {
+    background: #15ff04;
+}
+

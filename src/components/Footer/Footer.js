@@ -2,8 +2,7 @@ import React from "react";
 import './Footer.css'
 import FooterCell from "./FooterCell/FooterCell";
 import {connect} from "react-redux";
-import {gameIsFinished, gameMakeStep} from "../../store/actions/game";
-import text from "../../text/translation";
+import {gameIsFinished, gameMakeStep} from "../../redux/actions/game";
 const Footer = props => {
     const cells = new Array(10).fill('');
     if (!props.isFinished) {
@@ -22,7 +21,6 @@ const Footer = props => {
                     <FooterCell currentStep={props.currentStep} key={index} index={index}/>
                 )
             })}
-            <h3>{text.footer}</h3>
         </div>
     )
 }
@@ -30,7 +28,7 @@ const Footer = props => {
 function mapStateToProps(state) {
     return {
         isFinished: state.game.isFinished,
-        currentStep: state.game.currentStep
+        currentStep: state.game.currentStep,
     }
 }
 

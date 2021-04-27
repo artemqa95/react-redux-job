@@ -1,7 +1,7 @@
 import React from "react";
 import './FieldCell.css'
 import {connect} from "react-redux";
-import {playerClicked} from "../../../../store/actions/game";
+import {playerClicked} from "../../../../redux/actions/game";
 
 const FieldCell = props => {
     let text = null
