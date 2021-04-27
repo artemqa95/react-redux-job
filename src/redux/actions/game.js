@@ -77,7 +77,8 @@ export function gameMakeStep() {
         newDirectionsArray.push(actionKey)
 
         dispatch(gameNextStep(newCurrentStep, newPos, newDirectionsArray))
-        if (newCurrentStep === 10) dispatch(defineCorrectAnswer(newPos))
+        const finalStep = 10;
+        if (newCurrentStep === finalStep) dispatch(defineCorrectAnswer(newPos))
     }
 
 }

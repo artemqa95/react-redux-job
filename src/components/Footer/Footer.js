@@ -3,20 +3,23 @@ import './Footer.css'
 import FooterCell from "./FooterCell/FooterCell";
 import {connect} from "react-redux";
 import {gameIsFinished, gameMakeStep} from "../../redux/actions/game";
+
 const Footer = props => {
-    const cells = new Array(10).fill('');
+    const numberOfSteps = 10;
+    const cells = new Array(numberOfSteps).fill('');
     if (!props.isFinished) {
+        const timeForStep = 1000
         setTimeout(() => {
-            if (props.currentStep > 9) {
+            if (props.currentStep >= numberOfSteps) {
                 props.gameIsFinished()
                 return
             }
             props.gameMakeStep()
-        },1000)
+        }, timeForStep)
     }
     return (
         <div className={'Footer'}>
-            {cells.map((cell, index) =>  {
+            {cells.map((cell, index) => {
                 return (
                     <FooterCell currentStep={props.currentStep} key={index} index={index}/>
                 )
